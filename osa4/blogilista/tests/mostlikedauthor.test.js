@@ -66,17 +66,17 @@ describe('Author with most likes', () => {
     
   
     test('of many blogs', () => {
-      const result = listHelper.mostLikedAuthor(blogs)
+      const result = listHelper.mostLikes(blogs)
       assert.strictEqual(JSON.stringify(result), JSON.stringify({author: "Edsger W. Dijkstra", likes: 24}))
     })
 
     test('of one blog', () => {
-        const result = listHelper.mostLikedAuthor(listWithOneBlog)
-        assert.strictEqual(JSON.stringify(result), JSON.stringify({author: "Edsger W. Dijkstra", blogs: 1}))
+        const result = listHelper.mostLikes(listWithOneBlog)
+        assert.strictEqual(JSON.stringify(result), JSON.stringify({author: "Edsger W. Dijkstra", likes: 5}))
       })
     
       test('of empty array', () => {
-        const result = listHelper.mostLikedAuthor([])
+        const result = listHelper.mostLikes([])
         assert.strictEqual(result, null)
       })
   })

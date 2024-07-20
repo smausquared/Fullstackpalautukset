@@ -60,7 +60,7 @@ const mostBlogs = (blogs) => { // lodashissa oli niin helvetisti eri metodeja
     return {author: most.name, blogs: highest}
 }
 
-const mostLikedAuthor = (blogs) => {
+const mostLikes = (blogs) => {
     if (blogs.length === 0) {
         return null
     }
@@ -101,5 +101,5 @@ const mostLikedAuthor = (blogs) => {
 
 
   module.exports = {
-    dummy, totalLikes, favoriteBlog, mostBlogs, mostLikedAuthor
+    dummy, totalLikes, favoriteBlog, mostBlogs, mostLikes
   }
