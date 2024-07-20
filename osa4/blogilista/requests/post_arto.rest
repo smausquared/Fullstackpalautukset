@@ -2,8 +2,8 @@ POST http://localhost:3003/api/blogs
 content-type: application/json
 
 {
-    "title": "Bloggins",
+    "title": "Blololol",
     "author": "Apina Mies Os. Suurin",
-    "url": "abcdfea.com",
-    "likes": 6
+    "url": "yle.fi",
+    "likes": 100
 }
