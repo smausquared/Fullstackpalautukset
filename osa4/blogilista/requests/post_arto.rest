@@ -1,9 +1,9 @@
-POST http://localhost:3003/api/blogs 
+POST http://localhost:3003/api/users
 content-type: application/json
 
-{
-    "title": "Blololol",
-    "author": "Apina Mies Os. Suurin",
-    "url": "yle.fi",
-    "likes": 100
+{   
+    "username":"pikachu",
+    "name":"Poke Mon",
+    "password": "zapzap",
+    "blogs": []
 }
