@@ -152,9 +152,10 @@ const App = () => {
       <h2>blogs</h2>
       {!user && loginForm()}
       {user && blogContent()}
-      <Togglable buttonLabel='new blog'>
+      {user && <Togglable buttonLabel='new blog'>
         <BlogForm createBlog={blogAdder} messenger={setErrorMessage}/>
-      </Togglable>
+      </Togglable>}
+      
     </div>
   )
 }

@@ -41,6 +41,7 @@ const BlogForm = ({ createBlog, messenger }) => {
           value={title}
           name="Title"
           onChange={({ target }) => setTitle(target.value)}
+          placeholder='type title here'
         />
       </div>
       <div>
@@ -50,6 +51,7 @@ const BlogForm = ({ createBlog, messenger }) => {
           value={author}
           name="Author"
           onChange={({ target }) => setAuthor(target.value)}
+          placeholder='type author here'
         />
       </div>
       <div>
@@ -59,6 +61,7 @@ const BlogForm = ({ createBlog, messenger }) => {
           value={url}
           name="Url"
           onChange={({ target }) => setUrl(target.value)}
+          placeholder='type url here'
         />
       </div>
       <button type="submit">Submit</button>

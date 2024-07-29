@@ -2,8 +2,8 @@ POST http://localhost:3003/api/users
 content-type: application/json
 
 {   
-    "username":"pikachu",
-    "name":"Poke Mon",
-    "password": "zapzap",
+    "username":"mluukkai",
+    "name":"Matti Luukkainen",
+    "password": "salainen",
     "blogs": []
 }
