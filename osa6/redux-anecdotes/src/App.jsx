@@ -1,29 +1,27 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { createNew } from './reducers/anecdoteReducer'
+import anecdoteService from './services/anecdotes'
 import AnecdoteList from './components/AnecdoteList'
+import AnecdoteForm from './components/AnecdoteForm'
+import Filter from './components/Filter'
+import Notification from './components/Notification'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import {initializeAnecdotes } from './reducers/anecdoteReducer'
 
 const App = () => {
-  const anecdotes = useSelector(state => state)
-  const dispatch = useDispatch()
 
+const dispatch = useDispatch()
 
-  const addAnecdote = (event) => {
-    event.preventDefault()
-    console.log('adding new anecdote')
-    const content = event.target.anecdote.value
-    event.target.anecdote.value = ''
-    dispatch(createNew(content))
-  }
+  useEffect(() => {
+    dispatch(initializeAnecdotes())
+  }, [])
 
   return (
     <div>
       <h2>Anecdotes</h2>
+      <Notification />
+      <Filter />
       <AnecdoteList />
-      <h2>create new</h2>
-      <form onSubmit={addAnecdote}>
-        <div><input name="anecdote"/></div>
-        <button type="submit">create</button>
-      </form>
+      <AnecdoteForm />
     </div>
   )
 }
